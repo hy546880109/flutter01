@@ -5,10 +5,6 @@ import 'icon_text.dart';
 import 'love.dart';
 import 'music.dart';
 
-
-
-
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -30,35 +26,37 @@ class _HomePageState extends State<HomePage> {
         //图标
         child: Container(
           width: 400,
-          height: 350,
+          height: 250,
           color: Colors.white,
-          child: const IconWithText(
-            iconData: Icons.favorite,
-            text: '我爱你',
+          child: Icon(
+            Icons.favorite,
+            size: 100,
+            color: Colors.red,
           ),
         ),
       ),
       //播放按钮
       Container(
         width: 400,
-        height: 250,
+        height: 350,
         color: Colors.white,
         child: Center(
           child: Container(
-            width: 400,
-            height: 100,
-            color: Colors.blue,
-            child: buildMarqueeWidget(['我','爱','你'],'2')
-          ),
+              width: 400,
+              height: 300,
+              color: Colors.white,
+              child: buildMarqueeWidget([
+                "倚窗凭栏思绪翩",
+                "情归何处问落红。",
+                "相爱似一束烛火，",
+                "温暖岁月暖彼此。",
+                "海枯石烂情长在，",
+                "千年之后亦如初。",
+                "相濡以沫海角天，",
+                "爱恋之心永相随。"
+              ], '10')),
         ),
       )
     ]);
   }
 }
-
-
-
-
-
-
-

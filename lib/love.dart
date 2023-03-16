@@ -1,25 +1,19 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 
-
-
-
-
 MarqueeWidget buildMarqueeWidget(List<String> loopList, String s) {
-    ///上下轮播 安全提示
-    return MarqueeWidget(
-      //子Item构建器
-      itemBuilder: (BuildContext context, int index) {
-        String itemStr = loopList[index];
-        //通常可以是一个 Text文本
-        return Text(itemStr);
-      },
-      //循环的提示消息数量
-      count: loopList.length,
-    );
-  }
-
-
+  ///上下轮播 安全提示
+  return MarqueeWidget(
+    //子Item构建器
+    itemBuilder: (BuildContext context, int index) {
+      String itemStr = loopList[index];
+      //通常可以是一个 Text文本
+      return Text(itemStr);
+    },
+    //循环的提示消息数量
+    count: loopList.length,
+  );
+}
 
 // 上下滚动的消息轮播
 class MarqueeWidget extends StatefulWidget {
